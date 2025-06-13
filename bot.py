@@ -15,10 +15,14 @@ async def send_report(context: ContextTypes.DEFAULT_TYPE):
     report = collect_report()
     await context.bot.send_message(chat_id=CHAT_ID, text=report, parse_mode="Markdown")
 
+async def ping_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("✅ I'm up and running!")
+
 if __name__ == "__main__":
     print("-- Bot Started --")
     app = Application.builder().token(BOT_TOKEN).build()
     # app.add_handler(CommandHandler("report", send_report))
+    app.add_handler(CommandHandler("ping", ping_command))
     app.job_queue.run_daily(send_report, time=time(hour=HOUR_SCHEDULE, tzinfo=WIB))
     # app.job_queue.run_repeating(send_report, interval=5, first=0)
     app.run_polling()
