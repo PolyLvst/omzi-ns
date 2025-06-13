@@ -1,0 +1,7 @@
+header: "*Laporan Omzet Harian*"
+footer: "-- OmziNS"
+services:
+  - name: "💆 Izzah Salon Situbondo"
+    module: "plugins.izzah_salon.izzah_salon_plugin"
+  - name: "💨 Uchi Parfume Jember"
+    module: "plugins.uchi_parfume.uchi_parfume_jember_plugin"
