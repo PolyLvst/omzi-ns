@@ -1,0 +1,3 @@
+services:
+  omzins-bot:
+      build: .
