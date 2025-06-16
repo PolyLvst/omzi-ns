@@ -3,5 +3,18 @@ footer: "-- OmziNS"
 services:
   - name: "💆 Izzah Salon Situbondo"
     module: "plugins.izzah_salon.izzah_salon_plugin"
+    uuid: "e4283ab2-c7f2-4a09-89e6-43afb037a9ba"
   - name: "💨 Uchi Parfume Jember"
     module: "plugins.uchi_parfume.uchi_parfume_jember_plugin"
+    uuid: "507f1e86-ded9-42c3-a70c-842ea7d459b1"
+chats:
+  - name: "OmziNS Izzah Salon"
+    chat_id: ""
+    schedule: "19:00:00"
+    services:
+      - "e4283ab2-c7f2-4a09-89e6-43afb037a9ba"
+  - name: "OmziNS Uchi Parfume Jember"
+    chat_id: ""
+    schedule: "22:00:00"
+    services:
+      - "507f1e86-ded9-42c3-a70c-842ea7d459b1"
