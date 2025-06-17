@@ -44,4 +44,8 @@ class OmziNSEntry:
         return report
 
 if __name__ == "__main__":
-    print(OmziNSEntry.collect_report())
+    configs = OmziNSEntry.load_config()
+    chats = configs.get("chats")
+    for chat in chats:
+        services = chat.get("services")
+        print(OmziNSEntry.collect_report(services_uuid=services))

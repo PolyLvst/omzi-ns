@@ -12,7 +12,7 @@ def get_omzet():
     load_dotenv()
     BASE_URL = os.environ.get("BASE_URL_IZZAH", None)
     LOGIN_URL = f"{BASE_URL}login/"
-    OMZET_URL = f"{BASE_URL}transactions/omzet"
+    OMZET_URL = f"{BASE_URL}transactions/omzet-from-therapist"
     USERNAME = os.environ.get("USERNAME_IZZAH", "")
     PASSWORD = os.environ.get("PASSWORD_IZZAH", "")
     result:Response = requests.post(LOGIN_URL, data={"username":USERNAME, "password":PASSWORD})
