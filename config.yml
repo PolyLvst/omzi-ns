@@ -7,9 +7,15 @@ services:
   - name: "💆 Izzah Salon Situbondo (Non Therapist)"
     module: "plugins.izzah_salon.izzah_salon_plugin_non_therapist"
     uuid: "138d7924-0598-4778-bbf1-5ec5c31ae7a3"
+  - name: "⚡ Izzah Salon Situbondo (Akumulasi Bulan Ini)"
+    module: "plugins.izzah_salon.izzah_salon_plugin_accumulation"
+    uuid: "c0b62112-c07a-489c-b320-b5d7840777d0"
   - name: "💨 Uchi Parfume Jember"
     module: "plugins.uchi_parfume.uchi_parfume_jember_plugin"
     uuid: "507f1e86-ded9-42c3-a70c-842ea7d459b1"
+  - name: "⚡ Uchi Parfume Jember (Akumulasi Bulan Ini)"
+    module: "plugins.uchi_parfume.uchi_parfume_jember_plugin_accumulation"
+    uuid: "a019594b-ecd3-4725-b947-6bb412792911"
 chats:
   - name: "OmziNS Izzah Salon"
     chat_id: ""
@@ -17,8 +23,10 @@ chats:
     services:
       - "e4283ab2-c7f2-4a09-89e6-43afb037a9ba"
       - "138d7924-0598-4778-bbf1-5ec5c31ae7a3"
+      - "c0b62112-c07a-489c-b320-b5d7840777d0"
   - name: "OmziNS Uchi Parfume Jember"
     chat_id: ""
     schedule: "22:00:00"
     services:
       - "507f1e86-ded9-42c3-a70c-842ea7d459b1"
+      - "a019594b-ecd3-4725-b947-6bb412792911"

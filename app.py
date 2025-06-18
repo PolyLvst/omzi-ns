@@ -24,13 +24,11 @@ class OmziNSEntry:
         footer = config.get("footer")
         
         messages = []
-        total_omzet = Decimal("0")
         for service in services:
             if service["uuid"] not in services_uuid: continue
             try:
                 module = importlib.import_module(service["module"])
                 omzet = module.get_omzet()
-                total_omzet += omzet
                 messages.append(f"{service['name']}:\n└── {OmziNSEntry.format_rupiah(omzet)}")
             except Exception as e:
                 print(f"⚠️ {service['name']} failed: {e}")
@@ -40,7 +38,7 @@ class OmziNSEntry:
             messages.append("No configured service --")
         joined_messages = '\n'.join(messages)
         now = datetime.now(tz=pytz.timezone("Asia/Jakarta")).strftime("%d/%m/%Y")
-        report = f"{header}\n\n{joined_messages}\n\n*Total Omzet* : {OmziNSEntry.format_rupiah(total_omzet)}\n\n{footer}\n{now}"
+        report = f"{header}\n\n{joined_messages}\n\n{footer}\n{now}"
         return report
 
 if __name__ == "__main__":
